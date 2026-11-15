@@ -144,30 +144,28 @@ class Component extends DCLogic {
 
   extras() {
     return [
-      { label: 'New order alerts', price: 75, note: 'A text or email the moment an order comes in', re: /order alert|alert me|notify me|notification/ },
+      { label: 'New order alerts', price: 75, note: 'A text or email when an order comes in (works with Square or a form)', re: /order alert|alert me|notify me|notification/ },
       { label: '"Where\'s the truck today?" schedule', price: 100, note: 'Upcoming events, or where the truck will be', re: /event calendar|events calendar|upcoming events|where (we|we'll|we will) be|truck schedule|location schedule|our schedule|where('?s| is) the truck/ },
       { label: 'Printable QR code sign', price: 25, note: 'A sign customers scan to open your site', re: /\bqr\b/ },
-      { label: 'Social media feed', price: 50, note: 'Show your latest Instagram or Facebook posts', re: /instagram|facebook|tiktok|social (media )?feed/ },
-      { label: 'Reviews section', price: 50, note: 'Show your real Google reviews on the site', re: /reviews?\b|testimonial/ },
-      { label: 'Email newsletter signup', price: 50, note: 'Collect customer emails with Mailchimp or similar', re: /newsletter|mailing list|email list|mailchimp|email sign ?up/ },
+      { label: 'Social media feed', price: 50, note: 'Show your latest Facebook posts on your site', re: /facebook|social (media )?feed/ },
+      { label: 'Reviews section', price: 50, note: 'Selected Google reviews added by hand (does not auto-update)', re: /reviews?\b|testimonial/ },
+      { label: 'Email newsletter signup', price: 50, note: 'Collect emails with Mailchimp (their fees may apply)', re: /newsletter|mailing list|email list|mailchimp|email sign ?up/ },
       { label: 'Live chat box', price: 50, note: 'A free chat tool that sends messages to your phone', re: /\bchat\b|chatbox/ },
       { label: 'Custom form', price: 50, unit: ' each', note: 'Catering requests, job applications, waivers', re: /application|catering|request form|custom form|intake|questionnaire|waiver/ },
       { label: 'Video section', price: 50, note: 'Embed your videos or add a video header', re: /video|youtube/ },
-      { label: 'Business email setup', price: 50, note: 'you@yourbusiness.com (email service at cost)', re: /business email|professional email|company email|custom email/ },
+      { label: 'Business email setup', price: 50, note: 'you@yourbusiness.com (paid email service billed by the provider)', re: /business email|professional email|company email|custom email/ },
       { label: 'Photo cleanup', price: 50, note: 'Crop, resize and brighten your own photos', re: /photo (editing|cleanup|clean up)|edit (my|our) (photos|pictures)|clean up (my|our) (photos|pictures)|\bcrop/ },
       { label: 'Visitor stats', price: 25, note: 'See how many people visit your site and from where', re: /analytics|visitors?\b|traffic|site stats/ },
       { label: 'Search setup (SEO basics)', price: 75, note: 'Page titles, Google Search Console and a sitemap', re: /\bseo\b|search engine|show up (on|in) google|rank (on|in|higher)|found on google/ },
-      { label: 'Gift cards', price: 75, note: 'Sell digital gift cards through Square', re: /gift ?cards?/ },
-      { label: 'Move an existing site', price: 100, note: 'Switch from Wix, Squarespace, GoDaddy and others', re: /\bwix\b|squarespace|godaddy|weebly|wordpress|existing (site|website)|current (site|website)|redesign|old (site|website)/ },
-      { label: 'Second language version', price: 150, note: 'A full Spanish (or other language) version of the site', re: /spanish|bilingual|second language|translat|multi-?lingual/ }
+      { label: 'Gift cards', price: 75, note: 'Sell digital gift cards through Square (Square fees apply)', re: /gift ?cards?/ },
+      { label: 'Move an existing site', price: 100, note: 'Rebuilt by hand from Wix, Squarespace, GoDaddy', re: /\bwix\b|squarespace|godaddy|weebly|wordpress|existing (site|website)|current (site|website)|redesign|old (site|website)/ },
+      { label: 'Second language version', price: 150, note: 'A full Spanish version of the site (a native speaker should proofread)', re: /spanish|bilingual|second language|translat|multi-?lingual/ }
     ];
   }
 
   quotedExtras() {
     return [
-      { label: 'Online store', note: 'Cart, shipping, sales tax and inventory', re: /online store|web ?store|e-?commerce|sell (products|online|merch)|\bproducts\b|merch|shipping|shopify/ },
-      { label: 'Customer logins / member area', note: 'Accounts, passwords and private pages', re: /log ?in|sign ?in|accounts?\b|member area|members[- ]only|portal|password/ },
-      { label: 'Subscriptions / memberships', note: 'Recurring monthly billing', re: /subscription|recurring|membership|monthly box/ },
+      { label: 'Online store', note: 'Built on a platform like Square Online or Shopify', re: /online store|web ?store|e-?commerce|sell (products|online|merch)|\bproducts\b|merch|shipping|shopify/ },
       { label: 'Connecting software you already use', note: 'When it allows outside connections', re: /integrat|\bcrm\b|quickbooks|inventory system|point of sale|\bpos\b|\bapi\b|sync with/ },
       { label: 'Custom tools / calculators', note: 'Price calculators, dashboards, quote tools', re: /calculator|custom tool|quote tool|estimator|dashboard/ }
     ];
