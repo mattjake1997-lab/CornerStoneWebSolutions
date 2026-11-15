@@ -10,10 +10,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0}
-a{color:#0B62B0}a:hover{color:#084A86}
+a{color:#0A7C88}a:hover{color:#075E68}
 
 *{box-sizing:border-box} html{scroll-behavior:smooth} img,svg{max-width:100%}
 @media (max-width:600px){ h1{font-size:40px !important} h2{font-size:32px !important} section{padding-left:16px !important;padding-right:16px !important} }
+
+/* --- polish --- */
+.cs-hero,.cs-pagehead{position:relative;overflow:hidden;background-image:radial-gradient(900px 420px at 88% -10%,rgba(240,72,26,.24),transparent 60%),radial-gradient(760px 520px at -5% 115%,rgba(14,154,167,.38),transparent 60%),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px)!important;background-size:auto,auto,48px 48px,48px 48px!important}
+.cs-grad{background:linear-gradient(90deg,#F0481A,#FF9A6B);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.cs-btn{background:linear-gradient(180deg,#FF6A3D,#F0481A)!important;box-shadow:0 6px 16px rgba(240,72,26,.32);transition:transform .15s,box-shadow .15s}
+.cs-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(240,72,26,.45);color:#071833}
+.cs-card{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}
+.cs-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#F0481A,#0A7C88);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.cs-icon{background:linear-gradient(135deg,#0E2647,#0A7C88)!important;box-shadow:0 6px 14px rgba(14,154,167,.25)}
+.cs-icon svg{stroke:#FF7A52!important}
+.cs-glass{background:rgba(14,38,71,.72)!important;border:1px solid #1F6B73;backdrop-filter:blur(6px)}
+.cs-glow{background-image:radial-gradient(520px 220px at 100% 0,rgba(240,72,26,.28),transparent 65%),radial-gradient(420px 220px at 0 100%,rgba(14,154,167,.3),transparent 65%)!important}
+footer{border-top:3px solid;border-image:linear-gradient(90deg,#F0481A,#0A7C88) 1}
+.js .cs-reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .cs-reveal.in{opacity:1;transform:none}
+.cs-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(7,24,51,.13);border-color:#0A7C88}
+.cs-card:hover::before{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.js .cs-reveal{opacity:1;transform:none;transition:none}.cs-card,.cs-btn{transition:none}}
+/* --- end polish --- */
 </style>
 </head>
 <body>
@@ -30,15 +49,15 @@ a{color:#0B62B0}a:hover{color:#084A86}
         <a href="pricing.html" style="display: inline-flex; align-items: center; gap: 8px; color: #E4E7EC; text-decoration: none; font-size: 15px; padding: 12px 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>Services &amp; pricing</a>
         <a href="automation.html" style="display: inline-flex; align-items: center; gap: 8px; color: #E4E7EC; text-decoration: none; font-size: 15px; padding: 12px 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>Automation</a>
         <a href="work.html" style="display: inline-flex; align-items: center; gap: 8px; color: #E4E7EC; text-decoration: none; font-size: 15px; padding: 12px 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Our work</a>
-        <a href="quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: #F87302; color: #071833; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Get a free quote</a>
+        <a class="cs-btn" href="quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: #F0481A; color: #071833; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Get a free quote</a>
       </nav>
     </div>
   </header>
 
   <!-- Page header -->
-  <section style="background: #071833; color: #F4F7FB; padding: 56px 24px 64px; border-top: 1px solid #1B3558">
+  <section class="cs-pagehead" style="background: #071833; color: #F4F7FB; padding: 56px 24px 64px; border-top: 1px solid #1B3558">
     <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; max-width: 1120px">
-      <p style="margin: 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #F87302; font-weight: 600">Free quote</p>
+      <p style="margin: 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #F0481A; font-weight: 600">Free quote</p>
       <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.05; letter-spacing: -1px; max-width: 760px">What would your site cost?</h1>
       <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #C9CED6; max-width: 640px">Describe what you want, see an instant estimate, and send it to me. No obligation.</p>
     </div>
@@ -48,16 +67,16 @@ a{color:#0B62B0}a:hover{color:#084A86}
   <section id="quote" style="background: #071833; color: #F4F7FB; padding: 72px 24px 96px">
     <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px">
       <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-        <p style="margin: 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #F87302; font-weight: 600">Free quote</p>
+        <p style="margin: 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #F0481A; font-weight: 600">Free quote</p>
         <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 42px; line-height: 1.1">What would your site cost?</h2>
         <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9CED6">Describe what you want in a sentence or two and press Enter. You'll see an instant estimate.</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 12px; font-size: 16px">
           <a href="mailto:cornerstonedev02@gmail.com" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 6px 0">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F87302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0481A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
             cornerstonedev02@gmail.com
           </a>
           <a href="tel:+16185998547" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 6px 0">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F87302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0481A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
             (618) 599-8547
           </a>
         </div>
@@ -70,13 +89,13 @@ a{color:#0B62B0}a:hover{color:#084A86}
           <span style="font-size: 13px; color: #A9B1BD">Press Enter to see your estimate (Shift + Enter for a new line)</span>
         </div>
         <label for="rush" style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #E4E7EC; cursor: pointer; min-height: 44px">
-          <input id="rush" type="checkbox" style="width: 20px; height: 20px; accent-color: #F87302; margin: 0">
+          <input id="rush" type="checkbox" style="width: 20px; height: 20px; accent-color: #F0481A; margin: 0">
           <span>I need it fast — rush 1-week delivery (+25%, $75 min)</span>
         </label>
-        <button type="button" id="go" style="background: #F87302; color: #071833; border: none; font: inherit; font-weight: 600; font-size: 17px; padding: 16px; border-radius: 6px; cursor: pointer">See my estimate</button>
+        <button type="button" id="go" style="background: #F0481A; color: #071833; border: none; font: inherit; font-weight: 600; font-size: 17px; padding: 16px; border-radius: 6px; cursor: pointer">See my estimate</button>
         <p id="err" hidden style="margin: 0; font-size: 15px; color: #F2B8A8">Tell us a little about what you need first.</p>
         <div id="est" hidden style="background: #F4F7FB; color: #071833; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
-          <span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #0B62B0; font-weight: 600">Your estimate</span>
+          <span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #0A7C88; font-weight: 600">Your estimate</span>
           <div id="items" style="display: flex; flex-direction: column; gap: 8px; font-size: 15px"></div>
           <div style="border-top: 1px solid #D3DDEA; padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
             <span id="totalLabel" style="font-weight: 600"></span>
@@ -102,14 +121,14 @@ a{color:#0B62B0}a:hover{color:#084A86}
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
         <div style="display: flex; flex-direction: column; gap: 6px">
           <span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; color: #F4F7FB; margin-bottom: 4px">Contact us</span>
-          <a href="mailto:cornerstonedev02@gmail.com" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 16px; padding: 6px 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F87302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>cornerstonedev02@gmail.com</a>
-          <a href="tel:+16185998547" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 16px; padding: 6px 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F87302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(618) 599-8547</a>
+          <a href="mailto:cornerstonedev02@gmail.com" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 16px; padding: 6px 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0481A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>cornerstonedev02@gmail.com</a>
+          <a href="tel:+16185998547" style="color: #F4F7FB; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 16px; padding: 6px 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0481A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(618) 599-8547</a>
         </div>
-        <a href="quote.html" style="background: #F87302; color: #071833; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 24px; border-radius: 6px">Get a free quote</a>
+        <a class="cs-btn" href="quote.html" style="background: #F0481A; color: #071833; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 24px; border-radius: 6px">Get a free quote</a>
       </div>
       <div style="border-top: 1px solid #1B3558; padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px">
         <span>© 2026 Cornerstone Web Solutions</span>
-        <span style="color:#FFA24D;font-weight:600">Build. Enhance. Grow.</span>
+        <span style="color:#FF7A52;font-weight:600">Build. Enhance. Grow.</span>
       </div>
     </div>
   </footer>
@@ -235,7 +254,7 @@ class Component extends DCLogic {
       mailto += '?subject=' + encodeURIComponent('Website quote request') + '&body=' + encodeURIComponent(body);
     }
     return {
-      accent: this.props.accent ?? '#F87302',
+      accent: this.props.accent ?? '#F0481A',
       onePage: this.money(p.onePage),
       multiPage: this.money(p.multiPage),
       threePages: this.money(p.multiPage - 200),
@@ -295,6 +314,15 @@ $('desc').addEventListener('input', e => { comp.state.desc = e.target.value; });
 $('desc').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); comp.estimate(); } });
 $('rush').addEventListener('change', e => { const on = e.target.checked; comp.state.rush = on; if (comp.state.est) comp.estimate(on); });
 $('go').addEventListener('click', () => comp.estimate());
+</script>
+<script>
+(function(){document.documentElement.classList.add('js');
+var els=document.querySelectorAll('.cs-card,.cs-glass,.cs-glow');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12});
+els.forEach(function(e){e.classList.add('cs-reveal');io.observe(e)});
+window.addEventListener('load',function(){setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500)});
+})();
 </script>
 </body>
 </html>
